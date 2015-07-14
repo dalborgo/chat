@@ -1,0 +1,10 @@
+
+	Virtual Chat
+	---------------------
+	
+	Thank you for purchasing Virtual Chat. Please review the documents provided in the /documents/ folder. 
+	
+	Version 1.0.0
+	Developer: Jake / D'Trent / Tyler B (DesignSkate)
+	Support: www.DesignSkate.com / www.CodeCanyon.com
+	

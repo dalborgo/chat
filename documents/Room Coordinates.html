@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<title>Documentation - Room Coordinates</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<style>
+	html {
+		padding-bottom:40px;
+	}
+	
+	body {
+		font-family: 'Open Sans', sans-serif;
+		font-size:13px;
+		color:#808080;
+		background:#eaeaea;
+		margin:0;
+	}
+	
+	img {
+		border:0px;
+	}
+	
+	a {
+		color:#4C77A5;
+	}
+	
+	#docwrapper {	
+		width:800px;
+		margin:auto;
+		background:#ffffff;
+		overflow:auto;
+		border-radius:0px 0px 4px 4px;
+		-webkit-border-radius:0px 0px 4px 4px;
+		-moz-border-radius:0px 0px 4px 4px;
+		box-shadow: 5px 5px 5px #DDDDDD;
+	}
+	
+	#docsidebar {
+		width:120px;
+		float:left;
+		padding:20px;
+		border-radius:4px;
+		-webkit-border-radius:4px;
+	}
+	
+	#docsidebar li { list-style:none; padding:0; margin-bottom:5px; padding-bottom:5px; border-bottom:1px solid #f8f8f8; }
+	
+	#docmain {
+		float:right;
+		width:600px;
+		padding:20px;
+		overflow:auto;
+	}
+	
+	.title {
+		font-size:16px;
+	}
+	
+	.sub_title {
+		font-size:14px;
+		margin-bottom:5px;
+		color:#000000;
+	}
+	
+	.notes {
+		padding:5px;
+		margin-top:10px;
+		margin-bottom:10px;
+		color:#ffffff;
+		border-radius:3px;
+		background:#FF945D;
+	}
+	
+	p {
+		margin-top:10px;
+		margin-bottom:20px;
+	}
+	
+	#header {
+		font-size:16px;
+		border-bottom:1px solid #eaeaea;
+	}
+	
+	#footer {
+		margin-top:40px;
+		font-size:11px;
+		color:#c0c0c0;
+	}
+	
+	.info {
+		font-size:10px;
+		margin-bottom:10px;
+	}
+	
+	.section {
+		padding:10px;
+		margin-bottom:20px;
+		border:1px solid #eaeaea;
+		font-size:13px;
+		background:#ffffff;
+		margin-top:10px;
+	}
+</style>
+</head>
+<body>
+	<div id="docwrapper">
+		<div id="header">
+			<img src="images/logo.png" style="margin-bottom:-5px;">
+		</div>
+		<div id="docsidebar">
+			<div class="info">This document covers...</div>
+			<li>1) <a href="#info">Room Coords</a></li>
+		</div>
+		<div id="docmain">
+			<div class="title" id="info">Room Coordinates</div>
+			<p>
+				To create room coordinates, you can use any <strong>image map polygon generator</strong>, we'll link to a few in this guide.
+				After obtaining the coordinates, which will look something like this "101,382,171,928,11", you can enter this into the room file which is located in <strong>"static/rooms/lobby/config.xml"</strong>.
+				
+				<br /><br />
+				
+				By default, the line which you must edit looks like this.<br />
+				
+				<div class="section">
+				<mainroom>static/rooms/lobby/room_bg.png|123, 273, 219, 305, 222, 362, 296, 380, 284, 452, 308, 470, 350, 435, 425, 483, 382, 524, 407, 535, 465, 493, 508, 516, 542, 489, 597, 486, 614, 445, 651, 405, 698, 375, 770, 406, 790, 383, 800, 351, 842, 339, 754, 330, 714, 232, 621, 185, 549, 216, 397, 141, 325, 173, 392, 209, 295, 255</mainroom>
+				</div>
+				
+				<br />To create the new coordinates, simply replace the existing ones. The new line should look like this (coordinates are just an example).<br /><br />
+				
+				<div class="section">
+				<mainroom>static/rooms/lobby/room_bg.png|101,382,171,928,11</mainroom>
+				</div>
+				
+				<br />You may have noticed the | character, this is what we use to seperate content and parse the XML within JavaScript. Without this seperator, the chat room will not function
+				correctly.
+			</p>		
+			<div class="title" id="info">List of polygon editors</div>
+			<p>
+				[ <a href="https://developer.cdn.mozilla.net/media/uploads/demos/s/u/summerstyle/365ccfd644f2b008c33f0046d2ba1a8f/summer-html-image-ma_1355318513_demo_package/index.html">Mozilla - Recommended Link</a> ]<br />
+				<a href="http://imagemap-generator.dariodomi.de/">http://imagemap-generator.dariodomi.de/</a><br />
+				<a href="http://www.image-maps.com/">http://www.image-maps.com/</a>
+			</p>
+			<div id="footer">
+				Virtual Chat Documentation<br />
+				<a href="http://designskate.com/virtualchat">Chat Software</a> by DesignSkate
+			</div>
+		</div>
+	</div>
+</body>
+</html>

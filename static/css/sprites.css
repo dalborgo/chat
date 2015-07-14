@@ -1,0 +1,133 @@
+/*
+	Game Sprites
+*/
+
+.objectSprite { position:absolute; z-index: 4; }
+
+.audio_off, .audio_on{
+	background: url(../sprites/sprites.png) no-repeat;
+	z-index:60;
+}
+
+.audio_off{
+	background-position: 0 0;
+	width: 11px;
+	height: 16px;
+}
+
+.audio_on{
+	background-position: 0 -23px ;
+	width: 15px;
+	height: 16px;
+}
+
+/*
+	Character Sprites
+*/
+
+#myAvatar { transition: left 1.2s cubic-bezier(.42,-0.3,.78,1.25), top 1.2s cubic-bezier(.42,-0.3,.78,1.25); }
+.avatar { position:absolute !important; cursor:pointer; transition: left 1.2s linear, top 1.2s linear; }
+.username { font-size:12px; padding:3px; border-radius:4px; background:url('../img/trans.png'); color:#ffffff; width:90px; margin-left:-15px; position:absolute; margin-top:90px; text-align:center; }
+.orange { background:url('../img/trans_orange.png'); }
+
+.bubble 
+{
+	display:none;
+	position: absolute;
+	width: 140px;
+	min-height: 20px;
+	max-height:45px;
+	background: #FFFFFF;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: #eaeaea solid 2px;
+	z-index:3000;
+	top:-85px;
+	left:-50px;
+	padding:5px;
+	margin:40px;
+	word-wrap:break-word;
+	font-size:13px; 
+	color:#808080;
+}
+
+.bubble:after 
+{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 15px 16px 0;
+	border-color: #FFFFFF transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+	bottom: -15px;
+	left: 18px;
+}
+
+.bubble:before 
+{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 16px 17px 0;
+	border-color: #eaeaea transparent;
+	display: block;
+	width: 0;
+	z-index: 0;
+	bottom: -18px;
+	left: 17px;
+}
+
+.right {
+    -webkit-animation: right .6s steps(9) infinite;
+	-moz-animation: right .6s steps(9) infinite;
+	animation: right .6s steps(9) infinite;
+	width: 64px;
+	height: 98px;
+}
+
+.left {
+    -webkit-animation: left .6s steps(9) infinite;
+    -moz-animation: left .6s steps(9) infinite;	
+	animation: left .6s steps(9) infinite;	
+	width: 64px;
+	height: 98px;
+}
+
+.normal { width: 64px; height: 98px; }
+
+/*
+	Sprite Animation
+*/
+
+@-webkit-keyframes left {
+   from { background-position:    0px 96px;  }
+     to { background-position: -576px 96px; }
+}
+
+@-webkit-keyframes right {
+   from { background-position:    0px 196px;  }
+     to { background-position: -576px 196px; }
+}
+
+@-moz-keyframes left {
+   from { background-position:    0px 96px;  }
+     to { background-position: -576px 96px; }
+}
+
+@-moz-keyframes right {
+   from { background-position:    0px 196px;  }
+     to { background-position: -576px 196px; }
+}
+
+@keyframes left {
+   from { background-position:    0px 96px;  }
+     to { background-position: -576px 96px; }
+}
+
+@keyframes right {
+   from { background-position:    0px 196px;  }
+     to { background-position: -576px 196px; }
+}
